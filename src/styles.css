@@ -6,6 +6,7 @@ body {
 .container {
     max-width: 1400px;
     margin:0 auto;
+    
 
 }
 .grid {
@@ -14,7 +15,7 @@ body {
 }
 .img-responsive{
     width: 100%;
-    display: block;
+    display:block;
 }
 
 .grid-2-columns {
@@ -31,16 +32,15 @@ body {
 }
 .grid-4-columns {
     grid-template-columns: 1fr 1fr;
-
+    gap: 10px;
 }
-.card2 {
-    margin: 20px 0;
-}
+  
 .card {
-    background-color: white;
-    margin: 30px 0;   
+    background-color:  rgb(224, 217, 208);
+    margin: 30px 0;  
     
 }
+
 .card-header .grid {
     grid-gap: 0;
 
@@ -69,6 +69,17 @@ body {
     text-decoration: none;
 }
 
+iframe {
+    width:100%;
+    height: 150px;
+    aspect-ratio: 16 / 9;
+}
+
+
+.content-body {
+    background-color: rgb(224, 217, 208);
+}
+
 section {
     max-width: 100%;
     margin: 0 auto;
@@ -78,17 +89,18 @@ section {
 section.secondary {
     text-align: center;
     align-items: center;
-    background: rgba(138, 136, 127, 0.055);
-    
-     
+    background: rgba(139, 133, 106, 0.055);  
 }
+
+
 header {
-background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../src/karamoja2.webp");
-background-repeat:no-repeat;
+background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../src/karamoja2.webp"), url("../src/karamoja2.webp");
+background-repeat:repeat;
 background-size: cover;
 color:white;
 text-align: center;
 padding: 200px;
+animation: scrollBackground 10s linear infinite;
 }
 header h1 {
     font-weight: 700;
@@ -123,6 +135,7 @@ header a {
     color:#272044;
     background: white;
 }
+
 main {
     background-color: white;
 }
@@ -201,6 +214,20 @@ footer a {
     color:white ;
     opacity:0.7;
 }
+
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000px 0;
+    }
+}
+
+
+
+
 @media (max-width:960px) {
     header {
         padding: 60px 0;
